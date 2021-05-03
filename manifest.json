@@ -1,0 +1,10 @@
+{
+    "name": "ProjectAFK",
+    "description": "Have responsibilities?? Then you CAN'T GET SICK! SO LET'S EXCERCISE A BIT :D",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "bg.js"
+    },
+    "permissions": ["storage"]
+}
