@@ -2,35 +2,16 @@
   "author": "AFK",
   "name": "AFK",
   "manifest_version": 2,
-  //   "default_locale": "en",
   "version": "0.0.1",
   "version_name": "preview",
 
   "browser_action": {
-    "default_icon": "symbol_color.png",
-    "default_popup": "akf.html"
-  },
-
-  "icons": {
-    "128": "symbol_color.png"
-  },
-
-  "options_ui": {
-    "chrome_style": true,
-    "page": "options.html"
+    "default_icon": "symbol_color.png"
   },
 
   "permissions": ["activeTab", "http://*/*", "https://*/*"],
 
-  "content_scripts": [
-    {
-      "matches": ["file://afk.html"],
-      "js": ["scripts.js"],
-      "css": ["css.css"]
-    }
-  ],
-
-  "background": {
-    "scripts": ["background.js"]
+  "chrome_url_overrides": {
+    "newtab": "afk.html"
   }
 }
