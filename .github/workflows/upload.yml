@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ls
-        run: |
+      - run: |
           pwd 
+      - run: |
           ls
       - name: Upload Chrome Extension
         uses: trmcnvn/chrome-addon@v2
