@@ -17,7 +17,7 @@ jobs:
         uses: trmcnvn/chrome-addon@v2
         with:
           extension: 'jngmblkfodkelikbcjibfcaknmnckgdp'
-          zip: 'afk-chrome-extension/afk.zip'
+          zip: './afk-chrome-extension/afk.zip'
           client-id: '206079853979-uv3536u335r203ige4rsi3kl0jftkrn1.apps.googleusercontent.com'
           client-secret: 'oeMcFVqUqzJ_sOiwTVMjzJPd'
           refresh-token: '1//06uWcWWkVxYa0CgYIARAAGAYSNwF-L9IrzAp5WTOO53NmjQXDDEgYBDrYJ_SC1z1DHOHT1meoOOjj_gVr3YvfymU0GmTdWH0x5u0'
