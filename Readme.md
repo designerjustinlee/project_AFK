@@ -2,7 +2,7 @@
 
 ## branch
 
-dev를 기준으로 쓰고 다 완료되면 main에 머지하는식으로 하면 좋겟어요.
+master - dev - feature 로 처리
 
 ## chrome-extension 참고
 
