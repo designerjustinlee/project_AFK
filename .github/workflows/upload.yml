@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Upload Chrome Extension
-        uses: Klemensas/chrome-extension-upload-action
+        uses: Klemensas/chrome-extension-upload-action@1.4.1
         with:
           refresh-token: '1//06uWcWWkVxYa0CgYIARAAGAYSNwF-L9IrzAp5WTOO53NmjQXDDEgYBDrYJ_SC1z1DHOHT1meoOOjj_gVr3YvfymU0GmTdWH0x5u0'
           client-id: '206079853979-uv3536u335r203ige4rsi3kl0jftkrn1.apps.googleusercontent.com'
