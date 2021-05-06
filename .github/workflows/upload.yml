@@ -16,7 +16,7 @@ jobs:
       - run: |
           pwd
           ls -alF
-          
+
       - name: Chrome Extension upload & publish
         uses: Klemensas/chrome-extension-upload-action@v1.3
         with:
@@ -25,5 +25,5 @@ jobs:
           client-secret: 'oeMcFVqUqzJ_sOiwTVMjzJPd'
           file-name: './afk-chrome-extension/afk.zip'
           app-id: 'jngmblkfodkelikbcjibfcaknmnckgdp'
-          publish: true
+          # publish: true
        
