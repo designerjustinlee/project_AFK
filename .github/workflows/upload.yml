@@ -13,11 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+        # with:
+        #   fetch-depth: 0,
+        #   lfs: true
 
-      - run: |
-          pwd
-          ls -alF
+      # - run: |
+      #     pwd
+      #     ls -alF
        
       - name: Chrome Extension upload & publish
         uses: Passiverecords/chrome-extension-upload-action@1.4.1
