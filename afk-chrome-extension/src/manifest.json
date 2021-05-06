@@ -6,12 +6,12 @@
   "version_name": "preview",
 
   "browser_action": {
-    "default_icon": "symbol_color.png"
+    "default_icon": "assets/symbol_color.png"
   },
 
   "permissions": [],
 
   "chrome_url_overrides": {
-    "newtab": "afk.html"
+    "newtab": "index.html"
   }
 }
