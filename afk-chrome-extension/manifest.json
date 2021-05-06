@@ -9,7 +9,10 @@
     "default_icon": "symbol_color.png"
   },
 
-  "permissions": ["activeTab", "http://*/*", "https://*/*"],
+  "permissions": [
+    //
+    //"activeTab"
+  ],
 
   "chrome_url_overrides": {
     "newtab": "afk.html"
