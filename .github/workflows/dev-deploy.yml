@@ -2,7 +2,7 @@ name: upload chrome web store
 
 on:
   push:
-    branches: [master]
+    branches: [dev]
 
   workflow_dispatch:
 
