@@ -31,15 +31,11 @@ jobs:
         run: |
           cd dist/afk-chrome-extension
           pwd
-          ls -alF
-          zip -r afk.zip .
-          ls -alF | grep .zip
-          pwd
 
       - uses: actions/upload-artifact@v2
         with:
-          name: my-artifact
-          path: /home/runner/work/project_AFK/project_AFK/dist/afk-chrome-extension/afk.zip
+          name: afk
+          path: /home/runner/work/project_AFK/project_AFK/dist/afk-chrome-extension/
 
       # - name: Chrome Extension upload & publish
       #   uses: Passiverecords/chrome-extension-upload-action@1.4.1
