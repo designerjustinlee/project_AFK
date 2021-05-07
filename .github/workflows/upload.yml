@@ -34,6 +34,7 @@ jobs:
           ls -alF
           zip -r afk.zip .
           ls -alF | grep .zip
+          pwd
 
       - uses: actions/upload-artifact@v2
         with:
