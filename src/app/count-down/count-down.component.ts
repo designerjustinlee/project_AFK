@@ -60,6 +60,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   start() {
     console.log('start');
+    this.isStart = true;
   }
 
   ngOnInit(): void {
