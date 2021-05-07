@@ -11,4 +11,8 @@ export class AppComponent {
   rollWrist() {
     this.show = !this.show;
   }
+
+  done() {
+    this.show = !this.show;
+  }
 }

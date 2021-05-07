@@ -1,6 +1,7 @@
 import { OnDestroy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-count-down',
@@ -8,7 +9,10 @@ import { interval, Subscription } from 'rxjs';
   styleUrls: ['./count-down.component.scss'],
 })
 export class CountDownComponent implements OnInit, OnDestroy {
+  @Output() doneEvent = new EventEmitter<boolean>();
+
   isStart: boolean = false;
+
   private subscription = new Subscription();
 
   constructor() {}
@@ -28,7 +32,13 @@ export class CountDownComponent implements OnInit, OnDestroy {
     this.timeDifference = this.dDay.getTime() - new Date().getTime();
     console.log('getTimeDiff', this.timeDifference);
     this.allocateTimeUnits(this.timeDifference);
-    if (this.timeDifference < 0) this.isStart = false;
+    if (this.timeDifference < 0) {
+      this.isStart = false;
+
+      this.subscription.unsubscribe();
+
+      this.doneEvent.emit(true);
+    }
   }
 
   private allocateTimeUnits(timeDifference: number) {
