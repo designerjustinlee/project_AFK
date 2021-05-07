@@ -1,8 +1,8 @@
-<div class="timer" *ngIf="isStart">
+<div class="timer">
   <h4>Count Down</h4>
   <span id="minutes"> {{ minutesToDday }} </span>Min
-  <span id="seconds"> {{ secondsToDday }} </span>S
+  <span id="seconds"> {{ secondsToDday }} </span>Sec
 </div>
-<button (click)="start()" *ngIf="!isStart && !isDone">Start</button>
+<button (click)="start()" *ngIf="!isDone">Start</button>
 
-<button (click)="restart()" *ngIf="!isStart && isDone">Re-Start</button>
+<button (click)="restart()" *ngIf="isDone">Re-Start</button>
