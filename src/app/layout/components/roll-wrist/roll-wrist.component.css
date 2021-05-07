@@ -67,3 +67,7 @@
 .r360 {
   transform: rotate(-360deg);
 }
+
+.end .hourglas-box {
+  background: #ffeb3b;
+}
