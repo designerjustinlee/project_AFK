@@ -10,10 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: install tar zip
-        run: |
-          sudo apt-get install zip gzip tar
-
       - name: Checkout
         uses: actions/checkout@v2.3.4
 
