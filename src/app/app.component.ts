@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  isDone = false;
+  isDone: boolean = false;
 
-  done(event: any) {
+  done(event: boolean) {
     this.isDone = event;
   }
 }
