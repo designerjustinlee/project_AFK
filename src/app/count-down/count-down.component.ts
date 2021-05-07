@@ -42,9 +42,10 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   start() {
     this.isStart = true;
-    this.dDay.setMinutes(this.dDay.getMinutes() + 3);
+    this.dDay.setSeconds(this.dDay.getSeconds() + 20);
     this.subscription = interval(1000).subscribe((x) => {
-      this.getTimeDifference();
+      let a = this.getTimeDifference();
+      console.log('getTimeDifference', a);
     });
   }
 
