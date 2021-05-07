@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  show = false;
+  isDone = false;
 
   rollWrist() {
-    this.show = !this.show;
+    this.isDone = !this.isDone;
   }
 
   done() {
-    this.show = !this.show;
+    this.isDone = true;
   }
 }
