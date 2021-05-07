@@ -1,6 +1,5 @@
 .bg-wrap {
   width: 100%;
-  margin: 0 auto;
 }
 .container {
   width: 100%;
@@ -15,7 +14,7 @@
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -69,5 +68,36 @@
 .end {
   .hourglas-box {
     background: #ffeb3b;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 992px) {
+  .box-wrap {
+    width: 100%;
+    flex-direction: column-reverse;
+    .right-icon {
+      width: 90%;
+      .img-smll-box {
+        width: 100%;
+      }
+    }
+    .left-icon {
+      width: 100%;
+    }
+  }
+}
+
+/* only dark mode */
+@media (prefers-color-scheme: dark) {
+  .bg-wrap {
+    color: #ffffff;
+    background: #000000;
+    .box-wrap {
+      .right-icon {
+        img {
+          filter: invert(1);
+        }
+      }
+    }
   }
 }
