@@ -8,6 +8,7 @@ import { interval, Subscription } from 'rxjs';
   styleUrls: ['./count-down.component.scss'],
 })
 export class CountDownComponent implements OnInit, OnDestroy {
+  isStart: boolean = false;
   private subscription = new Subscription();
 
   constructor() {
@@ -55,6 +56,10 @@ export class CountDownComponent implements OnInit, OnDestroy {
     //       this.secondsInAMinute *
     //       this.hoursInADay)
     // );
+  }
+
+  start() {
+    console.log('start');
   }
 
   ngOnInit(): void {
