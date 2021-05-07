@@ -15,6 +15,8 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   private subscription = new Subscription();
 
+  isDone: boolean | undefined = false;
+
   constructor() {}
 
   milliSecondsInASecond = 1000;
@@ -34,10 +36,8 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
     if (this.timeDifference < 0) {
       this.isStart = false;
-
       this.subscription.unsubscribe();
-
-      this.doneEvent.emit();
+      this.doneEvent.emit(true);
     }
   }
 
@@ -49,7 +49,6 @@ export class CountDownComponent implements OnInit, OnDestroy {
       (timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour)) %
         this.secondsInAMinute
     );
-    
   }
 
   start() {

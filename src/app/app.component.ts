@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isDone = false;
 
-  done() {
-    this.isDone = true;
+  done(event: any) {
+    this.isDone = event;
   }
 }
