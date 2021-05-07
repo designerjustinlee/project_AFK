@@ -5,10 +5,6 @@
   "version": "0.0.1",
   "version_name": "preview",
 
-  "browser_action": {
-    "default_icon": "assets/symbol_color.png"
-  },
-
   "permissions": [],
 
   "chrome_url_overrides": {
