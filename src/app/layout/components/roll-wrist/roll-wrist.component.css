@@ -23,11 +23,29 @@
   text-align: center;
   width: 160px;
 }
-.left-icon:hover {
-  cursor: pointer;
-}
 .left-icon-text {
   margin-bottom: 15px;
+}
+
+.hourglas-box {
+  background: #9e9e9e;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hourglas-box:hover {
+  cursor: pointer;
+  background: #ffeb3b;
+}
+
+.hourglas-box img {
+  width: 64px;
+  height: 64px;
 }
 
 .right-icon {
