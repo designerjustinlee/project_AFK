@@ -30,14 +30,15 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   private getTimeDifference() {
     this.timeDifference = this.dDay.getTime() - new Date().getTime();
-    console.log('getTimeDiff', this.timeDifference);
+
     this.allocateTimeUnits(this.timeDifference);
+
     if (this.timeDifference < 0) {
       this.isStart = false;
 
       this.subscription.unsubscribe();
 
-      this.doneEvent.emit(true);
+      this.doneEvent.emit();
     }
   }
 
