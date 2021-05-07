@@ -27,11 +27,8 @@ export class CountDownComponent implements OnInit, OnDestroy {
   secondsToDday: number = 0;
   minutesToDday: number = 0;
 
-  private getTimeDifference(dDay: Date) {
-    console.log('dday', dDay.toISOString());
-    const cDay = new Date();
-    console.log('cday', cDay.toISOString());
-    this.timeDifference = dDay.getTime() - cDay.getTime();
+  private getTimeDifference(dDay: number) {
+    this.timeDifference = dDay - new Date().getTime();
 
     this.allocateTimeUnits(this.timeDifference);
 
@@ -58,10 +55,8 @@ export class CountDownComponent implements OnInit, OnDestroy {
     const dDay: Date = new Date();
     dDay.setSeconds(dDay.getSeconds() + 20);
 
-    console.log('start', dDay.toISOString());
-
     this.subscription = interval(500).subscribe((x) => {
-      this.getTimeDifference(dDay);
+      this.getTimeDifference(dDay.getTime());
     });
   }
 
