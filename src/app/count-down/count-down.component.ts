@@ -18,7 +18,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
   constructor() {}
 
   dateNow = new Date();
-  dDay = new Date();
+  // dDay = new Date();
 
   milliSecondsInASecond = 1000;
   minutesInAnHour = 60;
@@ -28,8 +28,8 @@ export class CountDownComponent implements OnInit, OnDestroy {
   secondsToDday: number = 0;
   minutesToDday: number = 0;
 
-  private getTimeDifference() {
-    this.timeDifference = this.dDay.getTime() - new Date().getTime();
+  private getTimeDifference(dDay: Date) {
+    this.timeDifference = dDay.getTime() - new Date().getTime();
 
     this.allocateTimeUnits(this.timeDifference);
 
@@ -54,9 +54,12 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   start() {
     this.isStart = true;
-    this.dDay.setSeconds(this.dDay.getSeconds() + 20);
+
+    let dDay: Date = new Date();
+    dDay.setSeconds(new Date().getDate() + 20);
+
     this.subscription = interval(500).subscribe((x) => {
-      this.getTimeDifference();
+      this.getTimeDifference(dDay);
     });
   }
 
