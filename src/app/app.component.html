@@ -5,33 +5,36 @@
       <div class="left-icon" (click)="rollWrist()">
         <div *ngIf="!show">
           <div class="left-icon-text">
-            지금부터 잠시 동안<br>
+            지금부터 잠시 동안<br />
             스트레칭 시작!
           </div>
           <div class="hourglas-box">
-            <img src="../assets/img/hourglas.png" class="r180">
+            <img src="../assets/img/hourglas.png" class="r180" />
           </div>
         </div>
         <div *ngIf="show">
           <div class="left-icon end">
             <div class="left-icon-text">
-              끝!!!<br>
+              끝!!!<br />
               참 잘했어요 :)
             </div>
             <div class="hourglas-box">
-              <img src="../assets/img/hourglas.png" class="r360">
+              <img src="../assets/img/hourglas.png" class="r360" />
             </div>
           </div>
         </div>
       </div>
       <div class="right-icon">
-        <div class="h-box">
-          <img src="../assets/img/img_txt_rollYourWrist.png" *ngIf="!show">
-          <img src="../assets/img/img_finished.png" *ngIf="show">
+        <div class="h-box" *ngIf="!show">
+          <img src="../assets/img/img_start.png" />
         </div>
-        <img src="../assets/img/img_doodle_rollYourWrist.png">
+        <div *ngIf="show">
+          <img src="../assets/img/img_finished.png" />
+        </div>
+        <div>
+          <img src="../assets/img/img_doodle_rollYourWrist.png" />
+        </div>
       </div>
     </div>
   </div>
 </div>
-
