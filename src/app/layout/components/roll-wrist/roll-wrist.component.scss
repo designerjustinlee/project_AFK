@@ -22,13 +22,15 @@
 .left-icon {
   text-align: center;
   width: 160px;
-}
-.left-icon-text {
-  margin-bottom: 15px;
+  .left-icon-text {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
 
 .hourglas-box {
-  background: #9e9e9e;
+  background: #dadada;
   width: 128px;
   height: 128px;
   margin: 0 auto;
@@ -36,29 +38,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.hourglas-box:hover {
-  cursor: pointer;
-  background: #ffeb3b;
-}
-
-.hourglas-box img {
-  width: 64px;
-  height: 64px;
+  &:hover {
+    cursor: pointer;
+    background: #ffeb3b;
+  }
+  img {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .right-icon {
   width: 800px;
-}
-
-.right-icon img {
-  width: 100%;
-}
-
-.img-smll-box {
-  width: 500px;
-  margin: 30px auto 0;
+  img {
+    width: 100%;
+  }
+  .img-smll-box {
+    width: 500px;
+    margin: 30px auto 0;
+  }
 }
 
 .r180 {
@@ -68,6 +66,8 @@
   transform: rotate(-360deg);
 }
 
-.end .hourglas-box {
-  background: #ffeb3b;
+.end {
+  .hourglas-box {
+    background: #ffeb3b;
+  }
 }
