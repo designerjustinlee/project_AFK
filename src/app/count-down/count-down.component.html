@@ -3,4 +3,6 @@
   <span id="minutes"> {{ minutesToDday }} </span>Min
   <span id="seconds"> {{ secondsToDday }} </span>S
 </div>
-<button (click)="start()" *ngIf="!isStart">Start</button>
+<button (click)="start()" *ngIf="!isStart && !isDone">Start</button>
+
+<button (click)="restart()" *ngIf="!isStart && isDone">Re-Start</button>

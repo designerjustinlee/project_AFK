@@ -34,6 +34,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
     if (this.timeDifference < 0) {
       this.isStart = false;
+      this.isDone = true;
       this.subscription.unsubscribe();
       this.doneEvent.emit(true);
     }
@@ -58,6 +59,12 @@ export class CountDownComponent implements OnInit, OnDestroy {
     this.subscription = interval(500).subscribe((x) => {
       this.getTimeDifference(dDay.getTime());
     });
+  }
+
+  restart() {
+    this.isStart = false;
+    this.isDone = false;
+    this.doneEvent.emit(false);
   }
 
   ngOnInit(): void {}
