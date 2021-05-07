@@ -8,10 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isDone = false;
 
-  rollWrist() {
-    this.isDone = !this.isDone;
-  }
-
   done() {
     this.isDone = true;
   }
