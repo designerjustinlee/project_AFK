@@ -3,26 +3,41 @@ name: upload chrome web store
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
 
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
+      - name: install tar zip
+        run: |
+          sudo apt-get install zip gzip tar
+
       - name: Checkout
         uses: actions/checkout@v2.3.4
-        # with:
-        #   fetch-depth: 0,
-        #   lfs: true
 
-      # - run: |
-      #     pwd
-      #     ls -alF
-       
+      - name: Node 12.x
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: '12.x'
+
+      - name: npm install and ng build
+        run: |
+          npm install
+          ng build --prod
+
+      - name: cd dist and archive
+        run: |
+          cd dist
+          ls -alF
+          zip -r afk.zip .
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: afk.zip
+
       - name: Chrome Extension upload & publish
         uses: Passiverecords/chrome-extension-upload-action@1.4.1
         with:
@@ -32,4 +47,3 @@ jobs:
           file-name: './afk-chrome-extension/afk.zip'
           app-id: 'jngmblkfodkelikbcjibfcaknmnckgdp'
           # publish: true
-       
