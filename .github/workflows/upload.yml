@@ -29,9 +29,11 @@ jobs:
 
       - name: cd dist and archive
         run: |
-          cd dist
+          cd dist/afk-chrome-extension
+          pwd
           ls -alF
           zip -r afk.zip .
+          ls -alF | grep .zip
 
       - uses: actions/upload-artifact@v2
         with:
