@@ -39,7 +39,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: afk.zip
+          path: /home/runner/work/project_AFK/project_AFK/dist/afk-chrome-extension/afk.zip
 
       # - name: Chrome Extension upload & publish
       #   uses: Passiverecords/chrome-extension-upload-action@1.4.1
