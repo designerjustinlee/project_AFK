@@ -1,4 +1,3 @@
-<!-- <router-outlet></router-outlet> -->
 <div class="bg-wrap">
   <div class="container">
     <div class="box-wrap">
@@ -28,7 +27,7 @@
         <div class="h-box" *ngIf="!show">
           <img src="../assets/img/img_start.png" />
         </div>
-        <div *ngIf="show">
+        <div class="h-box" *ngIf="show">
           <img src="../assets/img/img_finished.png" />
         </div>
         <div>
@@ -39,3 +38,5 @@
     </div>
   </div>
 </div>
+
+<router-outlet></router-outlet>
