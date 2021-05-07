@@ -11,9 +11,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
   isStart: boolean = false;
   private subscription = new Subscription();
 
-  constructor() {
-    this.dDay.setMinutes(this.dDay.getMinutes() + 30);
-  }
+  constructor() {}
 
   dateNow = new Date();
   dDay = new Date();
@@ -59,8 +57,8 @@ export class CountDownComponent implements OnInit, OnDestroy {
   }
 
   start() {
-    console.log('start');
     this.isStart = true;
+    this.dDay.setMinutes(this.dDay.getMinutes() + 3);
   }
 
   ngOnInit(): void {
