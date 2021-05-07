@@ -1,0 +1,51 @@
+.bg-wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.box-wrap {
+  width: 960px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-icon {
+  text-align: center;
+  width: 160px;
+}
+.left-icon:hover {
+  cursor: pointer;
+}
+.left-icon-text {
+  margin-bottom: 15px;
+}
+
+.right-icon {
+  width: 800px;
+}
+
+.right-icon img {
+  width: 100%;
+}
+
+.img-smll-box {
+  width: 500px;
+  margin: 30px auto 0;
+}
+
+.r180 {
+  transform: rotate(-180deg);
+}
+.r360 {
+  transform: rotate(-360deg);
+}
