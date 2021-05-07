@@ -64,6 +64,9 @@
 .r360 {
   transform: rotate(-360deg);
 }
+.h-box {
+  min-height: 198px;
+}
 
 .end {
   .hourglas-box {
@@ -83,6 +86,9 @@
     }
     .left-icon {
       width: 100%;
+    }
+    .h-box {
+      min-height: auto;
     }
   }
 }
