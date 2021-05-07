@@ -17,9 +17,6 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   constructor() {}
 
-  dateNow = new Date();
-  // dDay = new Date();
-
   milliSecondsInASecond = 1000;
   minutesInAnHour = 60;
   secondsInAMinute = 60;
