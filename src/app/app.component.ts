@@ -14,6 +14,7 @@ export class AppComponent {
   }
 
   start(event: boolean) {
+    console.log('asdf');
     this.isStart = event;
   }
 }
