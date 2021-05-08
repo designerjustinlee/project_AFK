@@ -77,7 +77,7 @@
 @media (min-width: 100px) and (max-width: 992px) {
   .box-wrap {
     width: 100%;
-    flex-direction: column-reverse;
+    flex-direction: column;
     .right-icon {
       width: 90%;
       .img-smll-box {
@@ -86,6 +86,8 @@
     }
     .left-icon {
       width: 100%;
+      justify-content: center;
+      display: flex;
     }
     .h-box {
       min-height: auto;
