@@ -2,6 +2,8 @@
   <h4>Count Down</h4>
   <span id="seconds"> {{ secondsToDday }} </span>
 </div>
-<button (click)="start()" *ngIf="!isRunning">Start</button>
+<div class="btn-warp">
+  <button (click)="start()" *ngIf="!isRunning" class="btn btn-primary">Start</button>
+  <button (click)="init()" *ngIf="isDone" class="btn btn-success">Re-Start</button>
+</div>
 
-<button (click)="init()" *ngIf="isDone">Re-Start</button>
