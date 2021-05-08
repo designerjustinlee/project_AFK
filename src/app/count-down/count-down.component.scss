@@ -1,10 +1,68 @@
 .timer {
   text-align: center;
-  font-family: Arial, sans-serif;
   font-size: 1.4em;
   letter-spacing: -1px;
+  h4 {
+    margin: 0px;
+    font-size: 1.8rem;
+    letter-spacing: -1.5px;
+  }
 }
 .timer span {
-  font-size: 2em;
-  margin: 0 3px 0 15px;
+  font-size: 2.8em;
+  margin: 0 10px 0 5px;
+  display: inline-block;
+}
+
+.btn-warp {
+  text-align: center;
+  margin: 15px 0px;
+  .btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 100px;
+  }
+  .btn:focus,
+  .btn:active:focus,
+  .btn.active:focus {
+    outline: 0 none;
+  }
+
+  .btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+  }
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active,
+  .btn-primary.active {
+    background: #33a6cc;
+    cursor: pointer;
+  }
+
+  .btn-primary:active,
+  .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+  }
+  .btn-success {
+    background: #28c76f;
+    color: #ffffff;
+  }
+  .btn-success:hover,
+  .btn-success:focus,
+  .btn-success:active,
+  .btn-success.active {
+    background: #81fbb8;
+    cursor: pointer;
+  }
+
+  .btn-success:active,
+  .btn-success.active {
+    background: #1ead5e;
+    box-shadow: none;
+  }
 }
