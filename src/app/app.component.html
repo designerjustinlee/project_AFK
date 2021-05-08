@@ -2,16 +2,14 @@
   <div class="container">
     <div class="box-wrap">
       <div class="left-icon">
-        <div *ngIf="!isDone">
-          <div class="left-icon-text">
-            지금부터 잠시 동안<br />
-            스트레칭 시작!
-          </div>
-          <div class="hourglas-box">
-            <img src="../assets/img/hourglas.png" class="r180" />
+        <div *ngIf="!isStart">
+          asdfasd
+          <div class="radial-timer s-animate">
+            <div class="radial-timer-half"></div>
+            <div class="radial-timer-half"></div>
           </div>
         </div>
-        <div *ngIf="isDone">
+        <!-- <div *ngIf="isDone">
           <div class="left-icon end">
             <div class="left-icon-text">
               끝!!!<br />
@@ -22,21 +20,22 @@
             </div>
           </div>
         </div>
+      </div> -->
+        <div class="right-icon">
+          <div class="h-box" *ngIf="!isDone">
+            <img src="../assets/img/img_start.png" />
+          </div>
+          <div class="h-box" *ngIf="isDone">
+            <img src="../assets/img/img_finished.png" />
+          </div>
+          <div>
+            <img src="../assets/img/img_doodle_rollYourWrist.png" />
+          </div>
+        </div>
+        <app-count-down (doneEvent)="done($event)"></app-count-down>
       </div>
-      <div class="right-icon">
-        <div class="h-box" *ngIf="!isDone">
-          <img src="../assets/img/img_start.png" />
-        </div>
-        <div class="h-box" *ngIf="isDone">
-          <img src="../assets/img/img_finished.png" />
-        </div>
-        <div>
-          <img src="../assets/img/img_doodle_rollYourWrist.png" />
-        </div>
-      </div>
-      <app-count-down (doneEvent)="done($event)"></app-count-down>
     </div>
   </div>
-</div>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</div>

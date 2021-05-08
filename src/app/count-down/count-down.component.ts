@@ -10,6 +10,7 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class CountDownComponent implements OnInit, OnDestroy {
   @Output() doneEvent = new EventEmitter<boolean>();
+  @Output() startEvent = new EventEmitter<boolean>();
 
   isRunning: boolean = false;
 
@@ -48,6 +49,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   start() {
     this.isRunning = true;
+    this.startEvent.emit(true);
 
     const dDay: Date = new Date();
     dDay.setSeconds(dDay.getSeconds() + 30);
