@@ -25,7 +25,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   timeDifference: number = 0;
 
-  secondsToDday: number = 0;
+  secondsToDday: number = 30;
 
   private getTimeDifference(dDay: number) {
     this.timeDifference = dDay - new Date().getTime();
@@ -61,7 +61,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
     this.isRunning = false;
     this.isDone = false;
     this.doneEvent.emit(false);
-    this.secondsToDday = 0;
+    this.secondsToDday = 30;
   }
 
   ngOnInit(): void {}
