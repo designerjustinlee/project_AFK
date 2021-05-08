@@ -11,25 +11,24 @@
     <div class="box-wrap">
       <div class="left-icon">
         <app-rainbow-timer *ngIf="this.isRunning"></app-rainbow-timer>
-
-        <div class="right-icon">
-          <div class="h-box" *ngIf="!isDone">
-            <img src="../assets/img/img_start.png" />
-          </div>
-          <div class="h-box" *ngIf="isDone">
-            <img src="../assets/img/img_finished.png" />
-          </div>
-
-          <div>
-            <img src="../assets/img/img_doodle_rollYourWrist.png" />
-          </div>
+      </div>
+      <div class="right-icon">
+        <div class="h-box" *ngIf="!isDone">
+          <img src="../assets/img/img_start.png" />
+        </div>
+        <div class="h-box" *ngIf="isDone">
+          <img src="../assets/img/img_finished.png" />
         </div>
 
-        <app-count-down
-          (doneEvent)="done($event)"
-          (startEvent)="start($event)"
-        ></app-count-down>
+        <div>
+          <img src="../assets/img/img_doodle_rollYourWrist.png" />
+        </div>
       </div>
+
+      <app-count-down
+        (doneEvent)="done($event)"
+        (startEvent)="start($event)"
+      ></app-count-down>
     </div>
   </div>
 
