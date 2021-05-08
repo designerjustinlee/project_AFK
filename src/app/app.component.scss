@@ -96,19 +96,19 @@
 }
 
 /* only dark mode */
-@media (prefers-color-scheme: dark) {
-  .bg-wrap {
-    color: #ffffff;
-    background: #000000;
-    .box-wrap {
-      .right-icon {
-        img {
-          filter: invert(1);
-        }
-      }
-    }
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   .bg-wrap {
+//     color: #ffffff;
+//     background: #000000;
+//     .box-wrap {
+//       .right-icon {
+//         img {
+//           filter: invert(1);
+//         }
+//       }
+//     }
+//   }
+// }
 
 /// 클라우드
 
