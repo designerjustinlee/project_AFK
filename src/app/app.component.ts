@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isDone: boolean = false;
+  isStart: boolean = false;
 
   done(event: boolean) {
     this.isDone = event;
+  }
+
+  start(event: boolean) {
+    this.isStart = event;
   }
 }

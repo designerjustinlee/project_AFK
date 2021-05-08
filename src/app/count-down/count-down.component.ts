@@ -10,6 +10,7 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class CountDownComponent implements OnInit, OnDestroy {
   @Output() doneEvent = new EventEmitter<boolean>();
+  @Output() startEvent = new EventEmitter<boolean>();
 
   isRunning: boolean = false;
 
@@ -25,8 +26,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   timeDifference: number = 0;
 
-  minutesToDday: number = 3;
-  secondsToDday: number = 0;
+  secondsToDday: number = 30;
 
   private getTimeDifference(dDay: number) {
     this.timeDifference = dDay - new Date().getTime();
@@ -37,7 +37,6 @@ export class CountDownComponent implements OnInit, OnDestroy {
       this.isDone = true;
       this.subscription.unsubscribe();
       this.doneEvent.emit(true);
-      this.minutesToDday = 0;
       this.secondsToDday = 0;
     }
   }
@@ -46,17 +45,14 @@ export class CountDownComponent implements OnInit, OnDestroy {
     this.secondsToDday = Math.floor(
       (timeDifference / this.milliSecondsInASecond) % this.secondsInAMinute
     );
-    this.minutesToDday = Math.floor(
-      (timeDifference / (this.milliSecondsInASecond * this.minutesInAnHour)) %
-        this.secondsInAMinute
-    );
   }
 
   start() {
     this.isRunning = true;
+    this.startEvent.emit(true);
 
     const dDay: Date = new Date();
-    dDay.setSeconds(dDay.getSeconds() + 180); //3분
+    dDay.setSeconds(dDay.getSeconds() + 30);
 
     this.subscription = interval(500).subscribe((x) => {
       this.getTimeDifference(dDay.getTime());
@@ -67,8 +63,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
     this.isRunning = false;
     this.isDone = false;
     this.doneEvent.emit(false);
-    this.minutesToDday = 3;
-    this.secondsToDday = 0;
+    this.secondsToDday = 30;
   }
 
   ngOnInit(): void {}
