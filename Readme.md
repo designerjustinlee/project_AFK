@@ -1,5 +1,19 @@
 # AFK(Away From Keyboard)
 
+## 실행방법
+
+```bash
+nodejs install
+
+npm install -g @angular/cli
+
+npm install
+
+ng build --prod
+
+ng serve -o
+```
+
 ## branch
 
 master - dev - feature 로 처리
