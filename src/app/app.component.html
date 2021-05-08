@@ -8,19 +8,19 @@
       <div class="cloud x4"></div>
       <div class="cloud x5"></div>
     </div>
+    <div class="left-icon">
+      <app-rainbow-timer *ngIf="this.isRunning"></app-rainbow-timer>
+    </div>
     <div class="box-wrap">
-      <div class="left-icon">
-        <app-rainbow-timer *ngIf="this.isRunning"></app-rainbow-timer>
-      </div>
       <div class="right-icon">
-        <div class="h-box" *ngIf="!isDone">
+        <div class="h-box textmotion1" *ngIf="!isDone">
           <img src="../assets/img/img_start.png" />
         </div>
-        <div class="h-box" *ngIf="isDone">
+        <div class="h-box textmotion1" *ngIf="isDone">
           <img src="../assets/img/img_finished.png" />
         </div>
 
-        <div>
+        <div class="charactermotion1">
           <img src="../assets/img/img_doodle_rollYourWrist.png" />
         </div>
       </div>

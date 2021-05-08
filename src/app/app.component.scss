@@ -21,6 +21,9 @@
 .left-icon {
   text-align: center;
   width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .left-icon-text {
     margin-bottom: 15px;
     font-weight: bold;
@@ -96,19 +99,19 @@
 }
 
 /* only dark mode */
-@media (prefers-color-scheme: dark) {
-  .bg-wrap {
-    color: #ffffff;
-    background: #000000;
-    .box-wrap {
-      .right-icon {
-        img {
-          filter: invert(1);
-        }
-      }
-    }
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   .bg-wrap {
+//     color: #ffffff;
+//     background: #000000;
+//     .box-wrap {
+//       .right-icon {
+//         img {
+//           filter: invert(1);
+//         }
+//       }
+//     }
+//   }
+// }
 
 /// 클라우드
 
@@ -295,4 +298,49 @@
     -webkit-transform: rotate(180deg);
     visibility: hidden;
   }
+}
+
+.character_motion1 {
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+}
+/*
+@keyframes character_motion1 {
+	20% { transform: rotate(15deg); }	
+	40% { transform: rotate(-10deg); }
+	60% { transform: rotate(5deg); }	
+	80% { transform: rotate(-5deg); }	
+	100% { transform: rotate(0deg); }
+}
+*/
+.textmotion1 {
+	transform-origin: middle center;
+	animation: wobble 6s ease infinite;
+}
+.charactermotion1 {
+  transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+@keyframes wobble {
+  0% { transform: translateX(0%); }
+  15% { transform: translateX(-7%) rotate(-5deg); }
+  30% { transform: translateX(5%) rotate(3deg); }
+  45% { transform: translateX(-2%) rotate(-3deg); }
+  60% { transform: translateX(5%) rotate(2deg); }
+  75% { transform: translateX(-2%) rotate(-1deg); }
+  100% { transform: translateX(0%); }
+}
+
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-50px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
