@@ -2,6 +2,7 @@
   text-align: center;
   font-size: 1.4em;
   letter-spacing: -1px;
+  color: #ffffff;
   h4 {
     margin: 0px;
     font-size: 1.8rem;
@@ -32,20 +33,20 @@
   }
 
   .btn-primary {
-    background: #0099cc;
+    background: #0072ff;
     color: #ffffff;
   }
   .btn-primary:hover,
   .btn-primary:focus,
   .btn-primary:active,
   .btn-primary.active {
-    background: #33a6cc;
+    background: #1a80fd;
     cursor: pointer;
   }
 
   .btn-primary:active,
   .btn-primary.active {
-    background: #007299;
+    background: #045fd0;
     box-shadow: none;
   }
   .btn-success {
