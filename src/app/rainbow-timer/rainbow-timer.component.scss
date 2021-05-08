@@ -19,7 +19,7 @@ $background: #78b4ea;
     height: $size;
     width: $size/2;
     border-radius: $size/2 0 0 $size/2;
-    background: center / contain no-repeat url("rainbow.png");
+    background: center / contain no-repeat url("/assets/img/rainbow.png");
     position: absolute;
     &:nth-of-type(2) {
       z-index: 99999999;
