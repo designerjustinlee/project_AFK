@@ -10,11 +10,11 @@ export class AppComponent {
   isStart: boolean = false;
 
   done(event: boolean) {
-    this.isDone = event;
+    this.isDone = true;
+    this.isStart = false;
   }
 
   start(event: boolean) {
-    console.log('asdf');
     this.isStart = event;
   }
 }
