@@ -29,7 +29,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets", "src/manifest.json"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/manifest.json",
+              "src/google3a71e6c3538e4e8b.html"
+            ],
             "styles": ["src/styles.scss"],
             "scripts": []
           },
