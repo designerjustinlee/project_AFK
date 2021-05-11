@@ -47,12 +47,13 @@ jobs:
           name: afk
           path: /home/runner/work/project_AFK/project_AFK/dist/afk-chrome-extension/
 
-      # - name: Chrome Extension upload & publish
-      #   uses: Passiverecords/chrome-extension-upload-action@1.4.1
-      #   with:
-      #     refresh-token: '1//06uWcWWkVxYa0CgYIARAAGAYSNwF-L9IrzAp5WTOO53NmjQXDDEgYBDrYJ_SC1z1DHOHT1meoOOjj_gVr3YvfymU0GmTdWH0x5u0'
-      #     client-id: '206079853979-uv3536u335r203ige4rsi3kl0jftkrn1.apps.googleusercontent.com'
-      #     client-secret: 'oeMcFVqUqzJ_sOiwTVMjzJPd'
-      #     file-name: './afk-chrome-extension/afk.zip'
-      #     app-id: 'njeooeindgiaogbemmdcihembojhcdpg'
+      - name: Chrome Extension upload & publish
+        if: github.ref == 'refs/heads/main'
+        uses: Passiverecords/chrome-extension-upload-action@1.4.1
+        with:
+          refresh-token: '1//06uWcWWkVxYa0CgYIARAAGAYSNwF-L9IrzAp5WTOO53NmjQXDDEgYBDrYJ_SC1z1DHOHT1meoOOjj_gVr3YvfymU0GmTdWH0x5u0'
+          client-id: '206079853979-uv3536u335r203ige4rsi3kl0jftkrn1.apps.googleusercontent.com'
+          client-secret: 'oeMcFVqUqzJ_sOiwTVMjzJPd'
+          file-name: './afk-chrome-extension/afk.zip'
+          app-id: 'njeooeindgiaogbemmdcihembojhcdpg'
 
