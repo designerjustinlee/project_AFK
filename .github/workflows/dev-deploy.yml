@@ -48,7 +48,7 @@ jobs:
           path: /home/runner/work/project_AFK/project_AFK/dist/afk-chrome-extension/
 
       - name: Chrome Extension upload & publish
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/master'
         uses: Passiverecords/chrome-extension-upload-action@1.4.1
         with:
           refresh-token: '1//06uWcWWkVxYa0CgYIARAAGAYSNwF-L9IrzAp5WTOO53NmjQXDDEgYBDrYJ_SC1z1DHOHT1meoOOjj_gVr3YvfymU0GmTdWH0x5u0'
