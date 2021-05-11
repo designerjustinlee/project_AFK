@@ -9,5 +9,9 @@
 
   "chrome_url_overrides": {
     "newtab": "index.html"
+  },
+
+  "icons": {
+    "128": "assets/img/app-logo-128x128.png"
   }
 }
