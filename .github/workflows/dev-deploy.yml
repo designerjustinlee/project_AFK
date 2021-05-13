@@ -56,4 +56,5 @@ jobs:
           client-secret: 'oeMcFVqUqzJ_sOiwTVMjzJPd'
           file-name: './afk-chrome-extension/afk.zip'
           app-id: 'njeooeindgiaogbemmdcihembojhcdpg'
+          publish: true
 
