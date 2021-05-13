@@ -45,7 +45,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: afk
-          path: /home/runner/work/project_AFK/project_AFK/dist/afk-chrome-extension/
+          path: dist/afk-chrome-extension/
 
       - name: zip artifact
         run: |
@@ -60,7 +60,7 @@ jobs:
           refresh-token: '1//06uWcWWkVxYa0CgYIARAAGAYSNwF-L9IrzAp5WTOO53NmjQXDDEgYBDrYJ_SC1z1DHOHT1meoOOjj_gVr3YvfymU0GmTdWH0x5u0'
           client-id: '206079853979-uv3536u335r203ige4rsi3kl0jftkrn1.apps.googleusercontent.com'
           client-secret: 'oeMcFVqUqzJ_sOiwTVMjzJPd'
-          file-name: './afk-chrome-extension/afk.zip'
+          file-name: './afk.zip'
           app-id: 'njeooeindgiaogbemmdcihembojhcdpg'
           publish: true
 
