@@ -50,8 +50,6 @@ jobs:
       - name: zip artifact
         run: |
           zip -r afk.zip dist/afk-chrome-extension/
-          pwd
-          ls
 
       - name: Chrome Extension upload & publish
         if: github.ref == 'refs/heads/master'
