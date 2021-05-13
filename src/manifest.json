@@ -1,6 +1,6 @@
 {
   "author": "AFK",
-  "name": "AFK",
+  "name": "AFK - away from keyboard",
   "manifest_version": 2,
   "version": "0.0.2",
   "version_name": "preview",
@@ -13,5 +13,7 @@
 
   "icons": {
     "128": "assets/img/app-logo-128x128.png"
-  }
+  },
+
+  "description": "Keep your body healthy while working in front of your computer all day. Take a quick time off from your computer and do a quick excercise!"
 }
