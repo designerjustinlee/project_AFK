@@ -32,16 +32,6 @@ jobs:
           cd dist/afk-chrome-extension
           pwd
 
-      - uses: jakejarvis/s3-sync-action@v0.5.1
-        with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: awayfromkeyboard
-          AWS_ACCESS_KEY_ID: AKIAXW6HU27E5SWAEVOL
-          AWS_SECRET_ACCESS_KEY: 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
-          AWS_REGION: 'us-west-1'   # optional: defaults to us-east-1
-          SOURCE_DIR: 'dist/afk-chrome-extension/'      # optional: defaults to entire repository
-
       - uses: actions/upload-artifact@v2
         with:
           name: afk
